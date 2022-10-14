@@ -23,27 +23,14 @@ public class OneToOne {
         entityManager.persist(department);
 
         // Create Employee1 Entity
-        Employee employee1 = new Employee();
-        employee1.setEname("Satish");
-        employee1.setSalary(45000.0);
-        employee1.setDeg("Technical Writer");
-
-        // Create Employee2 Entity
-        Employee employee2 = new Employee();
-        employee2.setEname("Krisha");
-        employee2.setSalary(45000.0);
-        employee2.setDeg("Technical Writer");
-        
-        // Create Employee3 Entity
-        Employee employee3 = new Employee();
-        employee3.setEname("Masthanvali");
-        employee3.setSalary(50000.0);
-        employee3.setDeg("Technical Writer");
+        Employee employee = new Employee();
+        employee.setEname("Satish");
+        employee.setSalary(45000.0);
+        employee.setDeg("Technical Writer");
+        employee.setDepartment(department);
         
         // Store Employees
-        entityManager.persist(employee1);
-        entityManager.persist(employee2);
-        entityManager.persist(employee3);
+        entityManager.persist(employee);
         
         entityManager.getTransaction().commit();
         entityManager.close();
