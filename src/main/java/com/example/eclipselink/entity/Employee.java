@@ -8,71 +8,69 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Employee {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	
-	private int eid;
-	private String ename;
-	private double salary;
-	private String deg;
-	
-	@ManyToOne
-	private Department department;
 
-	public Employee(int eid, String ename, double salary, String deg, Department department) {
-		super();
-		this.eid = eid;
-		this.ename = ename;
-		this.salary = salary;
-		this.deg = deg;
-		this.department = department;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 
-	public Employee() {
-		super();
-	}
+    private int eid;
+    private String ename;
+    private double salary;
+    private String deg;
 
+    @ManyToOne
+    private Department department;
 
+    public Employee(int eid, String ename, double salary, String deg, Department department) {
+        super();
+        this.eid = eid;
+        this.ename = ename;
+        this.salary = salary;
+        this.deg = deg;
+        this.department = department;
+    }
 
-	public int getEid() {
-		return eid;
-	}
+    public Employee() {
+        super();
+    }
 
-	public void setEid(int eid) {
-		this.eid = eid;
-	}
+    public int getEid() {
+        return eid;
+    }
 
-	public String getEname() {
-		return ename;
-	}
+    public void setEid(int eid) {
+        this.eid = eid;
+    }
 
-	public void setEname(String ename) {
-		this.ename = ename;
-	}
+    public String getEname() {
+        return ename;
+    }
 
-	public double getSalary() {
-		return salary;
-	}
+    public void setEname(String ename) {
+        this.ename = ename;
+    }
 
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
+    public double getSalary() {
+        return salary;
+    }
 
-	public String getDeg() {
-		return deg;
-	}
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
-	public void setDeg(String deg) {
-		this.deg = deg;
-	}
+    public String getDeg() {
+        return deg;
+    }
 
-	public Department getDepartment() {
-		return department;
-	}
+    public void setDeg(String deg) {
+        this.deg = deg;
+    }
 
-	public void setDepartment(Department department) {
-		this.department = department;
-	}
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 
 }
