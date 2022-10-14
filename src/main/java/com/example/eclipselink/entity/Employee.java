@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Employee {
@@ -17,7 +17,7 @@ public class Employee {
     private double salary;
     private String deg;
 
-    @ManyToOne
+    @OneToOne
     private Department department;
 
     public Employee(int eid, String ename, double salary, String deg, Department department) {
@@ -26,7 +26,6 @@ public class Employee {
         this.ename = ename;
         this.salary = salary;
         this.deg = deg;
-        this.department = department;
     }
 
     public Employee() {
