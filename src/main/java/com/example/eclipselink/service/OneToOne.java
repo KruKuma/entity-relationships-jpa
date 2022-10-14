@@ -27,21 +27,18 @@ public class OneToOne {
         employee1.setEname("Satish");
         employee1.setSalary(45000.0);
         employee1.setDeg("Technical Writer");
-        employee1.setDepartment(department);
 
         // Create Employee2 Entity
         Employee employee2 = new Employee();
         employee2.setEname("Krisha");
         employee2.setSalary(45000.0);
         employee2.setDeg("Technical Writer");
-        employee2.setDepartment(department);
         
         // Create Employee3 Entity
         Employee employee3 = new Employee();
         employee3.setEname("Masthanvali");
         employee3.setSalary(50000.0);
         employee3.setDeg("Technical Writer");
-        employee3.setDepartment(department);
         
         // Store Employees
         entityManager.persist(employee1);
