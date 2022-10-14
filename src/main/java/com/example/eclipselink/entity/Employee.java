@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Employee {
@@ -17,16 +16,12 @@ public class Employee {
     private double salary;
     private String deg;
 
-    @ManyToOne
-    private Department department;
-
     public Employee(int eid, String ename, double salary, String deg, Department department) {
         super();
         this.eid = eid;
         this.ename = ename;
         this.salary = salary;
         this.deg = deg;
-        this.department = department;
     }
 
     public Employee() {
@@ -63,14 +58,6 @@ public class Employee {
 
     public void setDeg(String deg) {
         this.deg = deg;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 
 }
