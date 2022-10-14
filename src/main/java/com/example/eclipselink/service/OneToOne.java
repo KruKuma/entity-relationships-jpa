@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 import com.example.eclipselink.entity.Department;
 import com.example.eclipselink.entity.Employee;
 
-public class ManyToOne {
+public class OneToOne {
 
     public static void main(String[] args) {
 
